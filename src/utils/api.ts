@@ -2,7 +2,7 @@ import axios from "axios";
 
 const { protocol, hostname } = window.location;
 const backendPort = process.env.REACT_APP_BACKEND_PORT;
-const baseUrl = `${protocol}://${hostname}:${backendPort}`;
+const baseUrl = `${protocol}//${hostname}:${backendPort}`;
 
 async function get(endpoint: string) {
   return axios.get(baseUrl + endpoint);
